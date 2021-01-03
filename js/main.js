@@ -7,7 +7,7 @@ var app = new Vue ({
       // primo contatto
       {
         name: "Puppibeibi",
-        avatar: "_1",
+        avatar: "mara",
         visible: true,
         messages: [
           {
@@ -30,7 +30,7 @@ var app = new Vue ({
       // secondo contatto
       {
         name: "Andrea",
-        avatar: "_2",
+        avatar: "andrea",
         visible: true,
         messages: [
           {
@@ -44,7 +44,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "16:00:47",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -53,7 +53,7 @@ var app = new Vue ({
       // terzo contatto
       {
         name: "Saretta",
-        avatar: "_3",
+        avatar: "sara",
         visible: true,
         messages: [
           {
@@ -67,7 +67,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "13:50:00",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -76,7 +76,7 @@ var app = new Vue ({
       // quarto contatto
       {
         name: "Zio Franco",
-        avatar: "_4",
+        avatar: "alessandro",
         visible: true,
         messages: [
           {
@@ -90,7 +90,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "12:43:24",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -99,7 +99,7 @@ var app = new Vue ({
       // quinto contatto
       {
         name: "Papà",
-        avatar: "_5",
+        avatar: "gigi",
         visible: true,
         messages: [
           {
@@ -113,7 +113,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "12:40:37",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -122,7 +122,7 @@ var app = new Vue ({
       // sesto contatto
       {
         name: "Raffaello",
-        avatar: "_6",
+        avatar: "raffaello",
         visible: true,
         messages: [
           {
@@ -136,7 +136,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "9:08:20",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -145,7 +145,7 @@ var app = new Vue ({
       // settimo contatto
       {
         name: "Steven",
-        avatar: "_7",
+        avatar: "steven",
         visible: true,
         messages: [
           {
@@ -159,7 +159,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "8:30:12",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -168,7 +168,7 @@ var app = new Vue ({
       // ottavo contatto
       {
         name: "Zia Bruna",
-        avatar: "_8",
+        avatar: "bruna",
         visible: true,
         messages: [
           {
@@ -182,7 +182,7 @@ var app = new Vue ({
             status: "received"
           },
           {
-            time: "16:15:22",
+            time: "8:25:02",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent"
           },
@@ -190,9 +190,13 @@ var app = new Vue ({
       },
     ],
 
-    activeContactIndex: 0,
+    activeContactIndex: null,
   },
   methods: {
-
+    getUser: function(index) {},
+    activateContact: function(index) {
+      console.log("ciao");
+      this.activeContactIndex = index;
+    }
   }
 });

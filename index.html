@@ -40,8 +40,13 @@
 
           <!-- lista contatti -->
           <ul>
-            <li v-for="(contact) in contacts">
-              <img src="img/mara.png">
+            <!-- il v-for stampa tutti i contatti nell'array -->
+            <!-- al click vengono chiamate due funzioni, una cambia la classe, l'altra visualizza i messaggi dell'utente selezionato -->
+            <!--  -->
+            <li v-for="(contact, index) in contacts"
+            @click="getUser(index); activateContact(index)"
+            :class="(index == activeContactIndex) ? 'active' : null">
+              <img :src="'img/' + contact.avatar + '.png'">
               <div>
                 <p>{{ contact.name }}</p>
                 <p class="message_text">{{ contact.messages[contact.messages.length - 1].text }}</p>

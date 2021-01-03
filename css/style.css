@@ -72,6 +72,9 @@ li div {
   opacity: 0.6;
   align-self: flex-start;
 }
+.active {
+  background-color: #5682A3;
+}
 
 /* CONTACTS */
 #contacts {
