@@ -3,6 +3,7 @@
 var app = new Vue ({
   el: "#root",
   data: {
+
     contacts: [
       // primo contatto
       {
@@ -191,12 +192,19 @@ var app = new Vue ({
     ],
 
     activeContactIndex: null,
+    selectedUser: {},
+
   },
   methods: {
-    getUser: function(index) {},
+
+    selectUser: function(index) {
+      this.selectedUser = this.contacts[index];
+      console.log(this.selectedUser);
+    },
+
     activateContact: function(index) {
-      console.log("ciao");
       this.activeContactIndex = index;
     }
+
   }
 });

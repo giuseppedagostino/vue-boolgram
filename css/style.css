@@ -49,6 +49,7 @@ img {
 
 /* SINGLE CONTACT */
 li {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -60,19 +61,28 @@ li:hover {
 }
 li div {
   max-width: 60%;
-  background-color: orange;
+}
+.contact_name {
+  font-size: 18px;
+  font-weight: 500;
 }
 .message_text {
+  font-size: 14px;
   /* le 3 istruzioni per nascondere il testo */
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
 .date {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: 500;
   opacity: 0.6;
-  align-self: flex-start;
 }
 .active {
+  color: white;
   background-color: #5682A3;
 }
 
@@ -149,7 +159,28 @@ li div {
   align-items: center;
 }
 #chat main {
+  padding: 0 80px;
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 110px);
   background: white;
+}
+.message {
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 70%;
+}
+.sent {
+  float: right;
+  background-color: lightgreen;
+}
+.received {
+  float: left;
+  background-color: lightblue;
+}
+#chat footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #5682A3;
 }

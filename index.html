@@ -14,6 +14,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <title>vue-boolgram</title>
+    <link rel="icon" href="img/icon.svg">
   </head>
 
   <body>
@@ -25,7 +26,7 @@
         <!-- contacts header -->
         <header>
           <i class="fas fa-bars"></i>
-          <h3>Telegram</h3>
+          <h3>Boolgram</h3>
         </header>
         <!-- / contacts header -->
 
@@ -44,11 +45,11 @@
             <!-- al click vengono chiamate due funzioni, una cambia la classe, l'altra visualizza i messaggi dell'utente selezionato -->
             <!--  -->
             <li v-for="(contact, index) in contacts"
-            @click="getUser(index); activateContact(index)"
+            @click="selectUser(index); activateContact(index)"
             :class="(index == activeContactIndex) ? 'active' : null">
               <img :src="'img/' + contact.avatar + '.png'">
               <div>
-                <p>{{ contact.name }}</p>
+                <p class="contact_name">{{ contact.name }}</p>
                 <p class="message_text">{{ contact.messages[contact.messages.length - 1].text }}</p>
               </div>
               <p class="date">{{ contact.messages[contact.messages.length - 1].time }}</p>
@@ -63,16 +64,27 @@
       <!-- chat -->
       <section id="chat">
 
-        <!-- contacts header -->
+        <!-- chat header -->
         <header>
-          <h3>Utente</h3>
-          <p class="opaque">Ultimo accesso blabla</p>
+          <!-- sfrutto l'indice per visualizzare nome e ultimo accesso del contatto attivo -->
+          <h3 v-if="activeContactIndex != null">{{ contacts[activeContactIndex].name }}</h3>
+          <p class="opaque" v-if="activeContactIndex != null">Ultimo accesso {{ contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length -1].time }}</p>
         </header>
-        <!-- / contacts header -->
+        <!-- / chat header -->
 
-        <!-- contacts main -->
-        <main></main>
-        <!-- / contacts main -->
+        <!-- chat main -->
+        <main>
+          <div class="sent, message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          <div class="received, message">ciao a te</div>
+        </main>
+        <!-- / chat main -->
+
+        <!-- chat footer -->
+        <footer>
+          <input type="text">
+          <button type="button" name="button">invia</button>
+        </footer>
+        <!-- / chat footer -->
 
       </section>
       <!-- / chat -->
