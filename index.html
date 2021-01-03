@@ -23,11 +23,27 @@
       <section id="contacts">
 
         <!-- contacts header -->
-        <header></header>
+        <header>
+          <i class="fas fa-bars"></i>
+          <h3>Telegram</h3>
+        </header>
         <!-- / contacts header -->
 
         <!-- contacts main -->
-        <main></main>
+        <main>
+          <!-- campo di ricerca -->
+          <div id="search">
+            <div><i class="fas fa-search"></i></div>
+            <input type="text" placeholder="Cerca">
+          </div>
+
+          <!-- lista contatti -->
+          <ul>
+            <li v-for="(contact) in contacts">
+              <p>{{ contact.name }}</p>
+            </li>
+          </ul>
+        </main>
         <!-- / contacts main -->
 
       </section>
@@ -37,7 +53,10 @@
       <section id="chat">
 
         <!-- contacts header -->
-        <header></header>
+        <header>
+          <h3>Utente</h3>
+          <p class="opacity">Ultimo accesso blabla</p>
+        </header>
         <!-- / contacts header -->
 
         <!-- contacts main -->
