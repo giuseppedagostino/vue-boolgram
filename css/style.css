@@ -1,0 +1,15 @@
+/* COLORI */
+/* Blu chiaro - #5682A3 */
+/* Blu scuro - #456F92 */
+/* Grigio chiaro - #E7EBF0 */
+
+/* COMMONS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background: #5682A3;
+}
