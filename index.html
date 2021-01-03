@@ -74,15 +74,22 @@
 
         <!-- chat main -->
         <main>
-          <div class="sent, message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          <div class="received, message">ciao a te</div>
+          <div class="sent">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti molestiae totam, assumenda? Quos saepe, nihil optio.</p>
+            <img src="img/peppe.jpg" v-if="activeContactIndex != null">
+          </div>
+
+          <div class="received">
+            <img :src="'img/' + contacts[activeContactIndex].avatar + '.png'" v-if="activeContactIndex != null">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          </div>
         </main>
         <!-- / chat main -->
 
         <!-- chat footer -->
         <footer>
           <input type="text">
-          <button type="button" name="button">invia</button>
+          <p>Lorem ipsum dolor sit amet.</p>
         </footer>
         <!-- / chat footer -->
 
