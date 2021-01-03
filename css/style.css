@@ -31,27 +31,46 @@ header {
   color: white;
   background: #5682A3;
 }
-main {
-  width: 100%;
-  height: calc(100% - 50px);
-  background: white;
-}
 i {
   margin-right: 20px;
 }
-.opacity {
+.opaque {
   margin-left: 20px;
   opacity: 0.6;
 }
 ul {
   list-style: none;
 }
+img {
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* SINGLE CONTACT */
 li {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   height: 80px;
 }
 li:hover {
   cursor: pointer;
   background-color: #E7EBF0;
+}
+li div {
+  max-width: 60%;
+  background-color: orange;
+}
+.message_text {
+  /* le 3 istruzioni per nascondere il testo */
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.date {
+  opacity: 0.6;
+  align-self: flex-start;
 }
 
 /* CONTACTS */
@@ -64,10 +83,21 @@ li:hover {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  border-right: 2px solid black;
 }
 #contacts main {
-  border-right: 2px solid black;
+  width: 100%;
+  height: calc(100% - 110px);
+  background: white;
+  overflow-y: scroll;
+}
+#contacts ::-webkit-scrollbar {
+  width: 2px;
+}
+#contacts ::-webkit-scrollbar-track {
+  background: rgba(230, 230, 230, 0.75);
+}
+#contacts ::-webkit-scrollbar-thumb {
+  background: rgba(86, 130, 163, 0.5);
 }
 #search {
   display: flex;
@@ -75,6 +105,8 @@ li:hover {
   align-items: center;
   width: 100%;
   height: 60px;
+  border-right: 2px solid rgba(230, 230, 230, 0.75);
+  background-color: white;
 }
 #search div {
   position: relative;
@@ -113,4 +145,8 @@ li:hover {
   padding: 10px 20px;
   align-items: center;
 }
-#chat main {}
+#chat main {
+  width: 100%;
+  height: calc(100% - 50px);
+  background: white;
+}

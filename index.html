@@ -29,18 +29,24 @@
         </header>
         <!-- / contacts header -->
 
+        <!-- campo di ricerca -->
+        <div id="search">
+          <div><i class="fas fa-search"></i></div>
+          <input type="text" placeholder="Cerca">
+        </div>
+
         <!-- contacts main -->
         <main>
-          <!-- campo di ricerca -->
-          <div id="search">
-            <div><i class="fas fa-search"></i></div>
-            <input type="text" placeholder="Cerca">
-          </div>
 
           <!-- lista contatti -->
           <ul>
             <li v-for="(contact) in contacts">
-              <p>{{ contact.name }}</p>
+              <img src="img/mara.png">
+              <div>
+                <p>{{ contact.name }}</p>
+                <p class="message_text">{{ contact.messages[contact.messages.length - 1].text }}</p>
+              </div>
+              <p class="date">{{ contact.messages[contact.messages.length - 1].time }}</p>
             </li>
           </ul>
         </main>
@@ -55,7 +61,7 @@
         <!-- contacts header -->
         <header>
           <h3>Utente</h3>
-          <p class="opacity">Ultimo accesso blabla</p>
+          <p class="opaque">Ultimo accesso blabla</p>
         </header>
         <!-- / contacts header -->
 
