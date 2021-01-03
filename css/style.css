@@ -11,5 +11,45 @@
   font-family: 'Montserrat', sans-serif;
 }
 body {
-  background: #5682A3;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #5682A3 0%, #5682A3 35%, #E7EBF0 35%, #E7EBF0 100%);
+}
+#root {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header {
+  width: 100%;
+  height: 80px;
+  background: yellow;
+}
+main {
+  width: 100%;
+  height: calc(100% - 80px);
+  background: green;
+}
+
+/* CONTACTS */
+#contacts {
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+#contacts header {
+  border-right: 2px solid black;
+}
+#contacts main {
+  border-right: 2px solid black;
+}
+
+/* CHAT */
+#chat {
+  float: right;
+  width: 70%;
+  height: 100%;
 }
