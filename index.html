@@ -72,7 +72,7 @@
             <p class="opaque">Ultimo accesso {{ contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length -1].time }}</p>
           </div>
 
-          <div v-if="activeContactIndex != null">
+          <div>
             <i class="fas fa-search"></i>
             <i class="fas fa-ellipsis-v"></i>
           </div>
@@ -96,7 +96,7 @@
 
         <!-- chat footer -->
         <footer>
-          <input type="text">
+          <input type="text" @keydown.enter="addNewMessage" v-model="newMessage">
           <div>
             <div>
               <i class="fas fa-file"></i>

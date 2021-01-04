@@ -207,6 +207,7 @@ var app = new Vue ({
     ],
 
     activeContactIndex: 0,
+    newMessage: "",
 
   },
   methods: {
@@ -214,7 +215,29 @@ var app = new Vue ({
     // prende l'indice dell'oggetto cliccato
     activateContact: function(index) {
       this.activeContactIndex = index;
-    }
+      console.log("utente selezionato " + this.contacts[this.activeContactIndex].name);
+    },
+
+    // aggiunge il nuovo messaggio + risposta del bot
+    addNewMessage: function() {
+      var newObj = {
+        time: dayjs().format("HH:mm:ss"),
+        text: this.newMessage,
+        status: "sent"
+      }
+      this.contacts[this.activeContactIndex].messages.push(newObj);
+      this.newMessage = "";
+      // aggiunta messaggio bot
+      var self = this;
+      setTimeout(function() {
+        var newBotObj = {
+          time: dayjs().format("HH:mm:ss"),
+          text: "Si, va bene!",
+          status: "received"
+        }
+        self.contacts[self.activeContactIndex].messages.push(newBotObj);
+      },4000);
+    },
 
   }
 });
