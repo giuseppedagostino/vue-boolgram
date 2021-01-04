@@ -74,9 +74,6 @@ li div {
   text-overflow: ellipsis;
 }
 .date {
-  position: absolute;
-  top: 10px;
-  right: 20px;
   font-size: 14px;
   font-weight: 500;
   opacity: 0.6;
@@ -146,6 +143,11 @@ li div {
   outline: none;
   background-color: white;
 }
+#contacts p.date {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
 
 /* CHAT */
 #chat {
@@ -164,23 +166,29 @@ li div {
   height: calc(100% - 170px);
   background: white;
 }
+#chat main p.date {
+  margin-top: 5px;
+  align-self: flex-end;
+}
 .sent {
   float: right;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   width: 70%;
   margin-bottom: 10px;
-  padding: 20px;
-  background-color: lightgreen;
+  padding: 5px 25px;
+  border-right: 2px solid #E7EBF0;
+  background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(231,235,240,0.5) 100%);
 }
 .received {
   float: left;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   width: 70%;
   margin-bottom: 10px;
-  padding: 20px;
-  background-color: lightblue;
+  padding: 5px 25px;
+  border-left: 2px solid #5682A3;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(86,130,163,0.25) 100%);
 }
 #chat footer {
   display: flex;

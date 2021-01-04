@@ -80,6 +80,7 @@
           <div v-for="(message) in selectedUser.messages"
           :class="(message.status == 'sent') ? 'sent' : 'received'">
             <p>{{ message.text }}</p>
+            <p class="date">{{ message.time }}</p>
           </div>
           <!-- <img :src="'img/' + contacts[activeContactIndex].avatar + '.png'" v-if="activeContactIndex != null"> -->
         </main>
