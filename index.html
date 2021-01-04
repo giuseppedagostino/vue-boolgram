@@ -97,7 +97,8 @@
 
         <!-- chat footer -->
         <footer>
-          <input type="text" @keydown.enter="addNewMessage" v-model="newMessage">
+          <input type="text" placeholder="Scrivi un messaggio"
+          @keydown.enter="addNewMessage" v-model="newMessage">
           <div>
             <div>
               <i class="fas fa-file"></i>
