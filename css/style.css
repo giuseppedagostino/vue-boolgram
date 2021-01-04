@@ -54,6 +54,7 @@ li {
 }
 li:hover {
   cursor: pointer;
+  color: black;
   background-color: #E7EBF0;
 }
 li div {
@@ -228,4 +229,7 @@ li div {
   width: 50%;
   font-size: 20px;
   background-color: lightgrey;
+}
+#chat footer button {
+  color: white;
 }

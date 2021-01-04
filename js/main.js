@@ -208,8 +208,17 @@ var app = new Vue ({
 
     activeContactIndex: 0,
     newMessage: "",
+    // valore dell'input per la ricerca contatti
+    inputFilter: "",
+    filteredContacts: [],
 
   },
+
+  // inizializzo l'array di contatti filtrati come pari a quello dei contatti totali, poichè il v-for ora scorre filteredContacts
+  created: function() {
+    this.filteredContacts = this.contacts;
+  },
+
   methods: {
 
     // prende l'indice dell'oggetto cliccato
@@ -225,18 +234,32 @@ var app = new Vue ({
         text: this.newMessage,
         status: "sent"
       }
-      this.contacts[this.activeContactIndex].messages.push(newObj);
-      this.newMessage = "";
-      // aggiunta messaggio bot
-      var self = this;
-      setTimeout(function() {
-        var newBotObj = {
-          time: dayjs().format("HH:mm:ss"),
-          text: "Si, va bene!",
-          status: "received"
-        }
-        self.contacts[self.activeContactIndex].messages.push(newBotObj);
-      },4000);
+      if (this.newMessage != "" && this.newMessage != " ") {
+        this.contacts[this.activeContactIndex].messages.push(newObj);
+        this.newMessage = "";
+        // aggiunta messaggio bot
+        var self = this;
+        setTimeout(function() {
+          var newBotObj = {
+            time: dayjs().format("HH:mm:ss"),
+            text: "Si, va bene!",
+            status: "received"
+          }
+          self.contacts[self.activeContactIndex].messages.push(newBotObj);
+        },4000);
+      }
+    },
+
+    searchContact: function() {
+      // console.log(this.searchFilter);
+      if (this.inputFilter != "") {
+        this.filteredContacts = this.contacts.filter((contact) => {
+          return contact.name.toLowerCase().includes(this.inputFilter.toLowerCase());
+        });
+      } else {
+        // se l'input è vuoto, ritorna tutti i contatti presenti
+        this.filteredContacts = this.contacts;
+      }
     },
 
   }
