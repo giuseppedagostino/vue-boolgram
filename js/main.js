@@ -206,17 +206,10 @@ var app = new Vue ({
       },
     ],
 
-    activeContactIndex: null,
-    selectedUser: {},
+    activeContactIndex: 0,
 
   },
   methods: {
-
-    // prende l'oggetto relativo al contatto attivo tramite l'indice
-    selectUser: function(index) {
-      this.selectedUser = this.contacts[index];
-      console.log(this.selectedUser);
-    },
 
     // prende l'indice dell'oggetto cliccato
     activateContact: function(index) {

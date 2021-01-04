@@ -31,9 +31,6 @@ header {
   color: white;
   background: #5682A3;
 }
-i {
-  margin-right: 20px;
-}
 .opaque {
   margin-left: 20px;
   opacity: 0.6;
@@ -93,6 +90,9 @@ li div {
   display: flex;
   align-items: center;
   padding: 10px 20px;
+}
+#contacts header i {
+  margin-right: 20px;
 }
 #contacts main {
   width: 100%;
@@ -159,12 +159,21 @@ li div {
   display: flex;
   padding: 10px 20px;
   align-items: center;
+  justify-content: space-between;
+}
+#chat header div:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+}
+#chat header i {
+  margin: 0 5px;
 }
 #chat main {
   padding: 20px 80px;
   width: 100%;
   height: calc(100% - 170px);
   background: white;
+  overflow-y: auto;
 }
 #chat main p.date {
   margin-top: 5px;
@@ -188,7 +197,7 @@ li div {
   margin-bottom: 10px;
   padding: 5px 25px;
   border-left: 2px solid #5682A3;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(86,130,163,0.25) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(86,130,163,0.5) 100%);
 }
 #chat footer {
   display: flex;
@@ -198,7 +207,7 @@ li div {
   padding: 0 80px;
   width: 100%;
   height: 120px;
-  background: white;
+  background: ghostwhite;
 }
 #chat input {
   margin-bottom: 10px;
@@ -211,4 +220,12 @@ li div {
 #chat input:focus {
   outline: none;
   width: 100%;
+}
+#chat footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  font-size: 20px;
+  background-color: lightgrey;
 }

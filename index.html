@@ -45,7 +45,7 @@
             <!-- al click vengono chiamate due funzioni, una cambia la classe, l'altra visualizza i messaggi dell'utente selezionato -->
             <!--  -->
             <li v-for="(contact, index) in contacts"
-            @click="selectUser(index); activateContact(index)"
+            @click="activateContact(index)"
             :class="(index == activeContactIndex) ? 'active' : null">
               <img :src="'img/' + contact.avatar + '.png'">
               <div>
@@ -67,8 +67,15 @@
         <!-- chat header -->
         <header>
           <!-- sfrutto l'indice per visualizzare nome e ultimo accesso del contatto attivo -->
-          <h3 v-if="activeContactIndex != null">{{ contacts[activeContactIndex].name }}</h3>
-          <p class="opaque" v-if="activeContactIndex != null">Ultimo accesso {{ contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length -1].time }}</p>
+          <div>
+            <h3>{{ contacts[activeContactIndex].name }}</h3>
+            <p class="opaque">Ultimo accesso {{ contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length -1].time }}</p>
+          </div>
+
+          <div v-if="activeContactIndex != null">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
         </header>
         <!-- / chat header -->
 
@@ -77,8 +84,9 @@
           <!-- messaggio -->
           <!-- con il v-for scorro l'array dei messaggi dell'utente selezionato -->
           <!-- con il ternario determino se il messaggio è stato inviato o ricevuto -->
-          <div v-for="(message) in selectedUser.messages"
-          :class="(message.status == 'sent') ? 'sent' : 'received'">
+          <div v-for="(message) in contacts[activeContactIndex].messages"
+          :class="message.status">
+          <!-- questo è il ternario con il quale avrebbe funzionato correttamente ma poichè i nomi delle classi sono uguali allo status il ternario è superfluo (message.status == 'sent') ? 'sent' : 'received' -->
             <p>{{ message.text }}</p>
             <p class="date">{{ message.time }}</p>
           </div>
@@ -89,7 +97,16 @@
         <!-- chat footer -->
         <footer>
           <input type="text">
-          <p>Lorem ipsum dolor sit amet.</p>
+          <div>
+            <div>
+              <i class="fas fa-file"></i>
+              <i class="fas fa-camera"></i>
+              <i class="fas fa-microphone"></i>
+              <i class="far fa-laugh-beam"></i>
+            </div>
+
+            <button>invia</button>
+          </div>
         </footer>
         <!-- / chat footer -->
 
