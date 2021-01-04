@@ -7,7 +7,7 @@ var app = new Vue ({
     contacts: [
       // primo contatto
       {
-        name: "Puppibeibi",
+        name: "Peach",
         avatar: "mara",
         visible: true,
         messages: [
@@ -35,18 +35,23 @@ var app = new Vue ({
         visible: true,
         messages: [
           {
-            time: "15:30:55",
-            text: "Amò ce ne andiamo da mia sorella questo weekend?",
+            time: "9:34:12",
+            text: "Allo a che ora andiamo a fare spesa?",
+            status: "sent"
+          },
+          {
+            time: "10:43:00",
+            text: "Senti facciamo oggi appena prima di pranzo?",
             status: "received"
           },
           {
-            time: "15:32:04",
-            text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
+            time: "10:49:23",
+            text: "Tanto Giusè due cose dobbiamo prendere e alla Coop dietro casa in una mezz'oretta ce la facciamo",
             status: "received"
           },
           {
-            time: "16:00:47",
-            text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
+            time: "10:50:44",
+            text: "Si dai.. alle 12:30 giù",
             status: "sent"
           },
         ]
@@ -58,19 +63,14 @@ var app = new Vue ({
         visible: true,
         messages: [
           {
-            time: "15:30:55",
-            text: "Amò ce ne andiamo da mia sorella questo weekend?",
-            status: "received"
-          },
-          {
-            time: "15:32:04",
-            text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
-          },
-          {
-            time: "13:50:00",
-            text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
+            time: "9:44:53",
+            text: "Sa devi venire in campagna? Mi serve una risposta entro stamattina ...",
             status: "sent"
+          },
+          {
+            time: "12:33:22",
+            text: "No pe mi dispiace, ma ho un pò da studiare oggi ....",
+            status: "received"
           },
         ]
       },
@@ -81,19 +81,34 @@ var app = new Vue ({
         visible: true,
         messages: [
           {
-            time: "15:30:55",
-            text: "Amò ce ne andiamo da mia sorella questo weekend?",
+            time: "10:45:00",
+            text: "Oh Peppe ma quindi?",
             status: "received"
           },
           {
-            time: "15:32:04",
-            text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
-          },
-          {
-            time: "12:43:24",
-            text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
+            time: "10:54:45",
+            text: "Bestiaaaa dimmi tutto",
             status: "sent"
+          },
+          {
+            time: "10:55:50",
+            text: "Andiamo stasera in campagna si? Io ci sono non ho capito chi altri",
+            status: "received"
+          },
+          {
+            time: "10:56:10",
+            text: "Sisi Ale andiamo siamo noi 4 e forse Sara e Andrea si aggiungono all'ultimo",
+            status: "sent"
+          },
+          {
+            time: "10:56:47",
+            text: "Aperitivo salumi e formaggi, olive, arachidi, ecc + aperol spritz e amaro",
+            status: "sent"
+          },
+          {
+            time: "11:00:00",
+            text: "Ca ciaaaaaaaaaaaaffà",
+            status: "received"
           },
         ]
       },

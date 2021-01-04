@@ -74,15 +74,14 @@
 
         <!-- chat main -->
         <main>
-          <div class="sent">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti molestiae totam, assumenda? Quos saepe, nihil optio.</p>
-            <img src="img/peppe.jpg" v-if="activeContactIndex != null">
+          <!-- messaggio -->
+          <!-- con il v-for scorro l'array dei messaggi dell'utente selezionato -->
+          <!-- con il ternario determino se il messaggio è stato inviato o ricevuto -->
+          <div v-for="(message) in selectedUser.messages"
+          :class="(message.status == 'sent') ? 'sent' : 'received'">
+            <p>{{ message.text }}</p>
           </div>
-
-          <div class="received">
-            <img :src="'img/' + contacts[activeContactIndex].avatar + '.png'" v-if="activeContactIndex != null">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-          </div>
+          <!-- <img :src="'img/' + contacts[activeContactIndex].avatar + '.png'" v-if="activeContactIndex != null"> -->
         </main>
         <!-- / chat main -->
 
