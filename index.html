@@ -92,15 +92,15 @@
 
             <div>
               <p class="date">{{ message.time }}</p>
-              <i class="fas fa-caret-square-down"></i>
+              <i class="fas fa-caret-square-down" @click="showOptions(activeContactIndex)"></i>
             </div>
 
             <!-- riquadro delle opzioni -->
-            <div class="options">
+            <div id="options" class="visible">
               <ul>
                 <li>Info messaggio</li>
                 <li>Modifica messaggio</li>
-                <li>Elimina messaggio</li>
+                <li @click="removeMessage(activeContactIndex)">Elimina messaggio</li>
               </ul>
             </div>
           </div>

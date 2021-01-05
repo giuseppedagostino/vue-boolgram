@@ -211,6 +211,7 @@ var app = new Vue ({
     // valore dell'input per la ricerca contatti
     inputFilter: "",
     filteredContacts: [],
+    // prova BONUS
 
   },
 
@@ -260,6 +261,14 @@ var app = new Vue ({
         // se l'input è vuoto, ritorna tutti i contatti presenti
         this.filteredContacts = this.contacts;
       }
+    },
+
+    showOptions: function(index) {
+      console.log("showOptions collegato");
+    },
+
+    removeMessage: function(index) {
+      console.log("removeMessage collegato");
     },
 
   }

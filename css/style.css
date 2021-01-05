@@ -204,6 +204,11 @@ li div {
 #chat main i {
   margin-left: 10px;
   color: #456F92;
+  opacity: 0.75;
+}
+#chat main i:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 /* sezione opzioni - BONUS*/
@@ -211,7 +216,7 @@ li div {
 main > div {
   position: relative;
 }
-.options {
+#options {
   /* posizionamento */
   position: absolute;
   right: 25px;
@@ -224,17 +229,23 @@ main > div {
   background-color: #E7EBF0;
   box-shadow: 0 0 4px 1px rgba(0,0,0,0.25);
 }
-.options ul {
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+#options ul {
   width: 100%;
 }
-.options li {
+#options li {
   display: flex;
   align-items: center;
   height: 30px;
   padding-left: 10px;
   border-bottom: 2px solid #5682A3;
 }
-.options li:hover {
+#options li:hover {
   cursor: pointer;
   color: white;
   background-color: rgb(86,130,163);
