@@ -79,6 +79,42 @@ var app = new Vue ({
             status: "received",
             visibility: false,
           },
+          {
+            time: "12:44:27",
+            text: "Va bene sa non ti preoccupare, se vuoi aggiungerti all'ultimo sei sempre la benvenuta!",
+            status: "sent",
+            visibility: false,
+          },
+          {
+            time: "16:56:20",
+            text: "Peeeeeee ma voi a che ora andate?",
+            status: "received",
+            visibility: false,
+          },
+          {
+            time: "17:03:10",
+            text: "Senti Sa non lo so con esattezza, circa le 18/18:30, più tardi non ne vale nemmeno la pena, perchè?",
+            status: "sent",
+            visibility: false,
+          },
+          {
+            time: "17:03:54",
+            text: "Allora io vengo dai! Però vi raggiungo più tardi, mi faccio accomapagnare da papà!",
+            status: "received",
+            visibility: false,
+          },
+          {
+            time: "17:04:15",
+            text: "Vengo per le 19, va bene? Porto anche qualche gioco da tavolo",
+            status: "received",
+            visibility: false,
+          },
+          {
+            time: "17:17:33",
+            text: "Certo sa va benissimo!",
+            status: "sent",
+            visibility: false,
+          },
         ]
       },
       // quarto contatto
@@ -120,6 +156,24 @@ var app = new Vue ({
           {
             time: "11:00:00",
             text: "Ca ciaaaaaaaaaaaaffà",
+            status: "received",
+            visibility: false,
+          },
+          {
+            time: "11:03:50",
+            text: "💖",
+            status: "sent",
+            visibility: false,
+          },
+          {
+            time: "14:04:20",
+            text: "Passi tu a prendere Andrea e Sara?",
+            status: "sent",
+            visibility: false,
+          },
+          {
+            time: "14:05:34",
+            text: "Sisi Pe nessun problema",
             status: "received",
             visibility: false,
           },
@@ -229,6 +283,32 @@ var app = new Vue ({
           },
         ]
       },
+      // nono contatto
+      {
+        name: "Masmar",
+        avatar: "marco",
+        visible: true,
+        messages: [
+          {
+            time: "15:30:55",
+            text: "Amò ce ne andiamo da mia sorella questo weekend?",
+            status: "received",
+            visibility: false,
+          },
+          {
+            time: "15:32:04",
+            text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
+            status: "received",
+            visibility: false,
+          },
+          {
+            time: "16:15:22",
+            text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
+            status: "sent",
+            visibility: false,
+          },
+        ]
+      },
     ],
 
     activeContactIndex: 0,
@@ -236,6 +316,8 @@ var app = new Vue ({
     // valore dell'input per la ricerca contatti
     inputFilter: "",
     filteredContacts: [],
+
+    emoticons: ["😀","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","🌹","💄","🎀","⚽","🎾","🏁","😡","👿","🐻","🐶","🐬","🐟","🍀","👀","🚗","🍎","💝","💙","👌","❤","😍","😉","😓","😳","💪","💩","🍸","🔑","💖","🌟","🎉","🌺","🎶","👠","🏈","⚾","🏆","👽","💀","🐵","🐮","🐩","🐎","💣","👃","👂","🍓","💘","💜","👊","💋","😘","😜","😵","🙏","👋","🚽","💃","💎","🚀","🌙","🎁","⛄","🌊","⛵","🏀","🎱","💰","👶","👸","🐰","🐷","🐍","🐫","🔫","👄","🚲","🍉","💛","💚"],
 
   },
 
@@ -276,15 +358,24 @@ var app = new Vue ({
     },
 
     searchContact: function() {
-      // console.log(this.searchFilter);
-      if (this.inputFilter != "") {
-        this.filteredContacts = this.contacts.filter((contact) => {
-          return contact.name.toLowerCase().includes(this.inputFilter.toLowerCase());
-        });
-      } else {
-        // se l'input è vuoto, ritorna tutti i contatti presenti
-        this.filteredContacts = this.contacts;
+      for (var i = 0; i < this.contacts.length; i++) {
+        if (this.inputFilter == "") {
+          this.contacts[i].visible = true;
+        } else if ( this.contacts[i].name.toLowerCase().includes(this.inputFilter.toLowerCase()) ) {
+          this.contacts[i].visible = true;
+        } else {
+          this.contacts[i].visible = false;
+        }
       }
+      // vecchia versione della funzione searchContact
+      // if (this.inputFilter != "") {
+      //   this.filteredContacts = this.contacts.filter((contact) => {
+      //     return contact.name.toLowerCase().includes(this.inputFilter.toLowerCase());
+      //   });
+      // } else {
+      //   // se l'input è vuoto, ritorna tutti i contatti presenti
+      //   this.filteredContacts = this.contacts;
+      // }
     },
 
     showOptions: function(index) {

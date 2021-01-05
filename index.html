@@ -47,7 +47,9 @@
             <!--  -->
             <li v-for="(contact, index) in filteredContacts"
             @click="activateContact(index)"
-            :class="(index == activeContactIndex) ? 'active' : null">
+            :class="(index == activeContactIndex) ? 'active' : null"
+            v-if="contact.visible">
+            <!-- questo v-if, in accordo con la funzinoe searchContact, rende il contatto visible solo se visible = true, e questa proprietà è uguale true solo se ciò che è digitato è "inlcuded" nel nome del contatto-->
               <img :src="'img/' + contact.avatar + '.png'">
               <div>
                 <p class="contact_name">{{ contact.name }}</p>
@@ -119,6 +121,11 @@
               <i class="fas fa-microphone"></i>
               <i class="far fa-laugh-beam"></i>
             </div>
+
+            <!-- emoticons -->
+            <!-- <div id="emoticons">
+              <div class="single_emoticon" v-for="(emoticon) in emoticons">a</div>
+            </div> -->
 
             <button @click="addNewMessage">Invia</button>
           </div>

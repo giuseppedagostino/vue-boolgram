@@ -210,8 +210,17 @@ li div {
   cursor: pointer;
   opacity: 1;
 }
+#chat ::-webkit-scrollbar {
+  width: 6px;
+}
+#chat ::-webkit-scrollbar-track {
+  background: rgba(230, 230, 230, 0.75);
+}
+#chat ::-webkit-scrollbar-thumb {
+  background: rgba(86, 130, 163, 0.5);
+}
 
-/* sezione opzioni - BONUS*/
+/* sezione opzioni */
 /* questi sono i div che rappresentano i messaggi */
 main > div {
   position: relative;
@@ -250,6 +259,7 @@ main > div {
   color: white;
   background-color: rgb(86,130,163);
 }
+/* fine sezione opzioni */
 
 #chat footer {
   display: flex;
@@ -308,3 +318,5 @@ main > div {
 #chat footer button:focus {
   outline: none;
 }
+
+/* sezione emoticons */
