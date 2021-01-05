@@ -89,7 +89,20 @@
           :class="message.status">
           <!-- questo è il ternario con il quale avrebbe funzionato correttamente ma poichè i nomi delle classi sono uguali allo status il ternario è superfluo (message.status == 'sent') ? 'sent' : 'received' -->
             <p>{{ message.text }}</p>
-            <p class="date">{{ message.time }}</p>
+
+            <div>
+              <p class="date">{{ message.time }}</p>
+              <i class="fas fa-caret-square-down"></i>
+            </div>
+
+            <!-- riquadro delle opzioni -->
+            <div class="options">
+              <ul>
+                <li>Info messaggio</li>
+                <li>Modifica messaggio</li>
+                <li>Elimina messaggio</li>
+              </ul>
+            </div>
           </div>
           <!-- <img :src="'img/' + contacts[activeContactIndex].avatar + '.png'" v-if="activeContactIndex != null"> -->
         </main>

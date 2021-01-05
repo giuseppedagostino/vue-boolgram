@@ -45,14 +45,14 @@ img {
 }
 
 /* SINGLE CONTACT */
-li {
+#contacts li {
   position: relative;
   display: flex;
   align-items: center;
   padding: 0 20px;
   height: 80px;
 }
-li:hover {
+#contacts li:hover {
   cursor: pointer;
   color: black;
   background-color: #E7EBF0;
@@ -176,10 +176,6 @@ li div {
   background: white;
   overflow-y: auto;
 }
-#chat main p.date {
-  margin-top: 5px;
-  align-self: flex-end;
-}
 .sent {
   float: right;
   display: flex;
@@ -200,6 +196,50 @@ li div {
   border-left: 2px solid #5682A3;
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(86,130,163,0.5) 100%);
 }
+.sent > div, .received > div {
+  margin-top: 5px;
+  align-self: flex-end;
+  display: flex;
+}
+#chat main i {
+  margin-left: 10px;
+  color: #456F92;
+}
+
+/* sezione opzioni - BONUS*/
+/* questi sono i div che rappresentano i messaggi */
+main > div {
+  position: relative;
+}
+.options {
+  /* posizionamento */
+  position: absolute;
+  right: 25px;
+  bottom: -85px;
+  z-index: 2;
+  /* dimensioni */
+  width: 200px;
+  /* height: 50px; */
+  /* aspetto */
+  background-color: #E7EBF0;
+  box-shadow: 0 0 4px 1px rgba(0,0,0,0.25);
+}
+.options ul {
+  width: 100%;
+}
+.options li {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 10px;
+  border-bottom: 2px solid #5682A3;
+}
+.options li:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(86,130,163);
+}
+
 #chat footer {
   display: flex;
   flex-direction: column;
