@@ -1,5 +1,3 @@
-// MILESTONE 1 - Creazione del layout di boolgram
-
 var app = new Vue ({
   el: "#root",
   data: {
@@ -15,19 +13,19 @@ var app = new Vue ({
             time: "15:30:55",
             text: "Amò ce ne andiamo da mia sorella questo weekend?",
             status: "received",
-            visibility: true,
+            visibility: false,
           },
           {
             time: "15:32:04",
             text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
             status: "received",
-            visibility: true,
+            visibility: false,
           },
           {
             time: "16:15:22",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
             status: "sent",
-            visibility: true,
+            visibility: false,
           },
         ]
       },
@@ -40,22 +38,26 @@ var app = new Vue ({
           {
             time: "9:34:12",
             text: "Allo a che ora andiamo a fare spesa?",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
           {
             time: "10:43:00",
             text: "Senti facciamo oggi appena prima di pranzo?",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "10:49:23",
             text: "Tanto Giusè due cose dobbiamo prendere e alla Coop dietro casa in una mezz'oretta ce la facciamo",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "10:50:44",
             text: "Si dai.. alle 12:30 giù",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
         ]
       },
@@ -68,12 +70,14 @@ var app = new Vue ({
           {
             time: "9:44:53",
             text: "Sa devi venire in campagna? Mi serve una risposta entro stamattina ...",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
           {
             time: "12:33:22",
             text: "No pe mi dispiace, ma ho un pò da studiare oggi ....",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
         ]
       },
@@ -86,32 +90,38 @@ var app = new Vue ({
           {
             time: "10:45:00",
             text: "Oh Peppe ma quindi?",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "10:54:45",
             text: "Bestiaaaa dimmi tutto",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
           {
             time: "10:55:50",
             text: "Andiamo stasera in campagna si? Io ci sono non ho capito chi altri",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "10:56:10",
             text: "Sisi Ale andiamo siamo noi 4 e forse Sara e Andrea si aggiungono all'ultimo",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
           {
             time: "10:56:47",
             text: "Aperitivo salumi e formaggi, olive, arachidi, ecc + aperol spritz e amaro",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
           {
             time: "11:00:00",
             text: "Ca ciaaaaaaaaaaaaffà",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
         ]
       },
@@ -124,17 +134,20 @@ var app = new Vue ({
           {
             time: "15:30:55",
             text: "Amò ce ne andiamo da mia sorella questo weekend?",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "15:32:04",
             text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
-            time: "12:40:37",
+            time: "16:15:22",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
         ]
       },
@@ -147,17 +160,20 @@ var app = new Vue ({
           {
             time: "15:30:55",
             text: "Amò ce ne andiamo da mia sorella questo weekend?",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "15:32:04",
             text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
-            time: "9:08:20",
+            time: "16:15:22",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
         ]
       },
@@ -170,17 +186,20 @@ var app = new Vue ({
           {
             time: "15:30:55",
             text: "Amò ce ne andiamo da mia sorella questo weekend?",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "15:32:04",
             text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
-            time: "8:30:12",
+            time: "16:15:22",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
         ]
       },
@@ -193,17 +212,20 @@ var app = new Vue ({
           {
             time: "15:30:55",
             text: "Amò ce ne andiamo da mia sorella questo weekend?",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
             time: "15:32:04",
             text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
+            status: "received",
+            visibility: false,
           },
           {
-            time: "8:25:02",
+            time: "16:15:22",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
-            status: "sent"
+            status: "sent",
+            visibility: false,
           },
         ]
       },
@@ -214,7 +236,6 @@ var app = new Vue ({
     // valore dell'input per la ricerca contatti
     inputFilter: "",
     filteredContacts: [],
-    // prova BONUS
 
   },
 

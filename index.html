@@ -96,7 +96,7 @@
             </div>
 
             <!-- riquadro delle opzioni -->
-            <div id="options" class="visible">
+            <div id="options" :class="(message.visibility == true) ? 'visible' : 'hidden' ">
               <ul>
                 <li>Info messaggio</li>
                 <li>Modifica messaggio</li>
