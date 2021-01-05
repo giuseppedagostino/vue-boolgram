@@ -14,17 +14,20 @@ var app = new Vue ({
           {
             time: "15:30:55",
             text: "Amò ce ne andiamo da mia sorella questo weekend?",
-            status: "received"
+            status: "received",
+            visibility: true,
           },
           {
             time: "15:32:04",
             text: "Voli Ryanair andata e ritorno a €85, partiamo venerdì sera alle 20:50",
-            status: "received"
+            status: "received",
+            visibility: true,
           },
           {
             time: "16:15:22",
             text: "Assolutamente si!! Appena esco da lavoro mi preparo due cose da portare",
-            status: "sent"
+            status: "sent",
+            visibility: true,
           },
         ]
       },
@@ -264,11 +267,18 @@ var app = new Vue ({
     },
 
     showOptions: function(index) {
-      console.log("showOptions collegato");
+      console.log("showOptions collegato " + index);
+      if (this.contacts[this.activeContactIndex].messages[index].visibility = false) {
+        this.contacts[this.activeContactIndex].messages[index].visibility = true;
+      } else {
+        this.contacts[this.activeContactIndex].messages[index].visibility = false;
+      }
     },
 
     removeMessage: function(index) {
-      console.log("removeMessage collegato");
+      console.log("removeMessage collegato " + index);
+      // passando l'indice a splice rimuovo esattamente l'elemento selezionato
+      this.contacts[this.activeContactIndex].messages.splice(index, 1);
     },
 
   }

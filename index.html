@@ -85,14 +85,14 @@
           <!-- messaggio -->
           <!-- con il v-for scorro l'array dei messaggi dell'utente selezionato -->
           <!-- con il ternario determino se il messaggio è stato inviato o ricevuto -->
-          <div v-for="(message) in contacts[activeContactIndex].messages"
+          <div v-for="(message, index) in contacts[activeContactIndex].messages"
           :class="message.status">
           <!-- questo è il ternario con il quale avrebbe funzionato correttamente ma poichè i nomi delle classi sono uguali allo status il ternario è superfluo (message.status == 'sent') ? 'sent' : 'received' -->
             <p>{{ message.text }}</p>
 
             <div>
               <p class="date">{{ message.time }}</p>
-              <i class="fas fa-caret-square-down" @click="showOptions(activeContactIndex)"></i>
+              <i class="fas fa-caret-square-down" @click="message.visibility = !message.visibility"></i>
             </div>
 
             <!-- riquadro delle opzioni -->
@@ -100,7 +100,7 @@
               <ul>
                 <li>Info messaggio</li>
                 <li>Modifica messaggio</li>
-                <li @click="removeMessage(activeContactIndex)">Elimina messaggio</li>
+                <li @click="removeMessage(index)">Elimina messaggio</li>
               </ul>
             </div>
           </div>
